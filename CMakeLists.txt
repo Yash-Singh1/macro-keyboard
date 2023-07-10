@@ -1,0 +1,5 @@
+picow_bt_example(hid_keyboard_demo)
+pico_enable_stdio_usb(picow_bt_example_hid_keyboard_demo_background 1)
+# target_link_libraries(picow_bt_example_hid_keyboard_demo_background hardware_pio)
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/../../../pio/ws2812/generated)
+pico_generate_pio_header(picow_bt_example_hid_keyboard_demo_background ${CMAKE_CURRENT_LIST_DIR}/../../../pio/ws2812/ws2812.pio OUTPUT_DIR ${CMAKE_CURRENT_LIST_DIR}/../../../pio/ws2812/generated)
